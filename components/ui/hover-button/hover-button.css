@@ -26,6 +26,7 @@ body {
     z-index: 1;
     text-transform: uppercase;
     letter-spacing: 2px;
+    border-radius: 5px;
 }
 
 .hover-btn::before {
