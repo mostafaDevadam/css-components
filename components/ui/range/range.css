@@ -1,0 +1,19 @@
+.range {
+    -webkit-appearance: none;
+    width: 80%;
+    max-width: 500px;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 3px;
+    outline: none;
+
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #3b82f6;
+    border-radius: 50%;
+    cursor: pointer;
+}
