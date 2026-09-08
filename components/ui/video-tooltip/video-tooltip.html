@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="video-tooltip.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+
+
+        <div class="video-container">
+            <video id="videoPlayer" src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+
+            <div class="control-panel">
+                <div class="progress-wrapper">
+                    <!--<input type="range" class="range" 
+                           min="0" max="100" 
+                           value="60" 
+                           title="asd" name="" id="range">-->
+                    <input title="test" type="range" id="range" class="range" value="0" min="0" max="100" step="0.1">
+                    <div class="tooltip" id="tooltip">0:00</div>
+
+                </div>
+                <button id="playBtn">Play</button>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <script>
+
+        const video = document.getElementById('videoPlayer');
+         const range = document.getElementById('range');
+         const tooltip = document.getElementById('tooltip');
+         const playBtn = document.getElementById('playBtn');
+         const container = document.querySelector('.video-container');
+ 
+         /* range.addEventListener('input', updateTooltip);
+ 
+         range.addEventListener('mouseenter', () => {
+             tooltip.style.visibility = 'visible';
+             updateTooltip();
+         });
+ 
+         range.addEventListener('mouseleave', () => {
+             tooltip.style.visibility = 'hidden';
+         });
+ 
+ 
+         function updateTooltip() {
+             const val = range.value;
+             const min = range.min ? Number(range.min) : 0;
+             const max = range.max ? Number(range.max) : 100;
+ 
+             // Calculate percentage of current value
+             const percentage = (val - min) / (max - min);
+ 
+             // Position tooltip using percentage, adjusting for the thumb width offset
+             //tooltip.style.left = `calc(${percentage * 100}% + (${8 - percentage * 16}px))`;
+             tooltip.style.left = `${percentage}%`;
+             tooltip.textContent = val;
+         }
+ 
+ 
+ 
+         // play video
+         // Play/Pause toggle
+         playBtn.addEventListener('click', () => {
+             if (video.paused) {
+                 video.play();
+                 playBtn.textContent = 'Pause';
+                 container.classList.add('playing');
+             } else {
+                 video.pause();
+                 playBtn.textContent = 'Play';
+                 container.classList.remove('playing');
+             }
+         });
+ 
+         //
+         range.addEventListener('input', () => {
+             const time = (range.value / 100) * video.duration;
+             video.currentTime = time;
+ 
+             tooltip.textContent = formatTime(time);
+             tooltip.style.left = `${range.value}%`;
+         });
+ 
+ 
+ 
+         // Format seconds into MM:SS
+         function formatTime(seconds) {
+             const mins = Math.floor(seconds / 60);
+             const secs = Math.floor(seconds % 60);
+             return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+         }
+ 
+         // Update range bar and tooltip position as video plays
+         video.addEventListener('timeupdate', () => {
+             if (!video.duration) return;
+             const percentage = (video.currentTime / video.duration) * 100;
+             range.value = percentage;
+ 
+             tooltip.textContent = formatTime(video.currentTime);
+             tooltip.style.left = `${percentage}%`;
+         });*/
+
+
+        // Format seconds into MM:SS
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        // Unified function to update position and time text
+        function updateTooltip(percentage, timeText) {
+            tooltip.textContent = timeText;
+            // Centers the tooltip by accounting for the track percentage and thumb offset
+            tooltip.style.left = `calc(${percentage}% + (${8 - (percentage * 0.16)}px))`;
+        }
+
+        // Update video and tooltip when sliding
+        range.addEventListener('input', () => {
+            if (!video.duration) return;
+            const percentage = Number(range.value);
+            const time = (percentage / 100) * video.duration;
+
+            video.currentTime = time;
+            tooltip.style.visibility = 'visible';
+            updateTooltip(percentage, formatTime(time));
+        });
+
+        // Show/Hide on hover
+        range.addEventListener('mouseenter', () => {
+            tooltip.style.visibility = 'visible';
+            if (video.duration) {
+                const percentage = (video.currentTime / video.duration) * 100;
+                updateTooltip(percentage, formatTime(video.currentTime));
+            }
+        });
+
+        range.addEventListener('mouseleave', () => {
+            tooltip.style.visibility = 'hidden';
+        });
+
+        // Update range bar and tooltip as video plays naturally
+        video.addEventListener('timeupdate', () => {
+            if (!video.duration) return;
+            const percentage = (video.currentTime / video.duration) * 100;
+            range.value = percentage;
+
+            // Only update position automatically if mouse isn't interacting/hovering
+            updateTooltip(percentage, formatTime(video.currentTime));
+        });
+
+        // Play/Pause toggle
+        playBtn.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+                playBtn.textContent = 'Pause';
+                container.classList.add('playing');
+            } else {
+                video.pause();
+                playBtn.textContent = 'Play';
+                container.classList.remove('playing');
+            }
+        });
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
