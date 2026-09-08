@@ -1,0 +1,114 @@
+.bar {
+   border: 1px solid #333;
+   height: 200px;
+   padding: 5px;
+   position: relative;
+}
+
+.tooltip {
+   visibility: hidden;
+    border: 1px solid #333;
+    padding: 5px;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10;
+    left: 1%;
+    background: #fff;
+    z-index: 10;
+}
+
+.bar>span:hover .tooltip {
+   /*display: block;*/
+   visibility: visible;
+   
+}
+
+.bar>span:hover {
+   cursor: pointer;
+}
+
+.btn {
+   margin: 5px;
+   border: none;
+   padding: 5px 10px;
+   border-radius: 5px;
+   cursor: pointer;
+   
+}
+
+.btn1 {
+   background-color: aquamarine;
+}
+
+.btn2 {
+   background-color: burlywood;
+  
+}
+
+
+.btn3 {
+   background-color: cornflowerblue;
+   color: white;
+   position: relative;
+}
+
+
+
+
+.block-btns {
+   margin-top: 30px;
+}
+
+
+.block-btns .tp {
+    visibility: hidden;
+    border: 1px solid #333;
+    padding: 5px;
+    width: 100px;
+    height: 20px;
+    border-radius: 5px;
+    position: absolute;
+    background: #fff;
+    z-index: 10;
+}
+
+
+.block-btns .tp1 {
+    top: 10;
+    left: 3%;
+}
+
+.block-btns .tp2 {
+    top: 10;
+    left: 17%;
+}
+
+
+.block-btns .tp3 {
+    top: 10;
+    left: 33%;
+}
+
+.block-btns .btn1:hover ~ .tp1 {
+   /*display: block;*/
+   visibility: visible;
+   
+}
+
+.block-btns .btn2:hover ~ .tp2 {
+   /*display: block;*/
+   visibility: visible;
+   
+}
+
+
+.block-btns .btn3:hover ~ .tp3 {
+   /*display: block;*/
+   visibility: visible;
+   
+}
+
+
+
