@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="range-tooltip.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <input type="range" class="range" min="0" max="100" value="60" title="asd" name="" id="rangeInput">
+
+        <div class="tooltip" id="tooltip">
+            Tooltip...
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        const range = document.getElementById('rangeInput');
+        const tooltip = document.getElementById('tooltip');
+
+        // Show and update tooltip when dragging or moving over the slider
+       /* range.addEventListener('input', () => {
+            tooltip.style.visibility = 'visible';
+            tooltip.textContent = range.value;
+        });*/
+
+        // Hide tooltip when the mouse leaves the slider area
+       
+
+        range.addEventListener('input', updateTooltip);
+
+        range.addEventListener('mouseenter', () => {
+            tooltip.style.visibility = 'visible';
+            updateTooltip();
+        });
+
+         range.addEventListener('mouseleave', () => {
+            tooltip.style.visibility = 'hidden';
+        });
+
+
+        function updateTooltip() {
+            const val = range.value;
+            const min = range.min ? Number(range.min) : 0;
+            const max = range.max ? Number(range.max) : 100;
+
+            // Calculate percentage of current value
+            const percentage = (val - min) / (max - min);
+
+            // Position tooltip using percentage, adjusting for the thumb width offset
+            tooltip.style.left = `calc(${percentage * 100}% + (${8 - percentage * 16}px))`;
+            tooltip.textContent = val;
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
