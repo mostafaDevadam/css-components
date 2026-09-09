@@ -408,11 +408,26 @@ footer {
 .nav-mobile-header > p {
   
    justify-content: space-between;
-   margin-right: 10px;
+   
    margin-top: 20px;
-   font-size: 20px;
+   right: 0%;
+   
+  
    font-weight: bold;
    color: #333;
+   border: 1px solid #333;
+   margin: auto;
+   display: block !important;
+   padding: 5px;
+   border-radius: 5px;
+   cursor: pointer;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   text-align: center;
+   text-transform: capitalize;
+
+
+   
 
 }
  
