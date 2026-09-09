@@ -1,0 +1,36 @@
+
+
+.progress-steps {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    font-family: sans-serif;
+
+}
+
+.step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ddd;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    z-index: 1;
+
+}
+
+.step.active {
+    background-color: #007bff;
+
+}
+
+.line {
+    flex: 1;
+    height: 4px;
+    background: #ddd;
+    margin: 0 5px;
+
+}
