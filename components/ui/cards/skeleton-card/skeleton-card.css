@@ -1,0 +1,23 @@
+.card {
+   width: 300px;
+   padding: 20px;
+   background: white;
+}
+
+.img, .text {
+   background: #e0e0e0;
+   border-radius: 4px;
+   margin-bottom: 10px;
+}
+
+.img{
+  height: 150px;
+}
+
+.text {
+  height: 20px;
+}
+
+.short {
+  width: 60%;
+}
