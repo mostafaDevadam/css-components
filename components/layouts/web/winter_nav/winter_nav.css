@@ -1,24 +1,61 @@
 .winter-nav {
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 64px;
+  background: linear-gradient(135deg, #010178 0%, #2d4a7a 100%);
+  border-bottom: 3px solid rgba(255,255,255,0.15);
+  font-family: system-ui, -apple-system, sans-serif;
+  box-shadow: 0 4px 20px rgba(0 ,0 ,0 ,0.3);
 }
 
 .nav-brand {
+    color: #e8f0ff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 10px rgba(180, 210, 255, 0.5);
 
+    
 }
 
 .nav-links {
+    display: flex;
+    gap: 0.5rem;
 
 }
 
+
+
 .nav-link {
+    color: rgba(220,230,255,0.8);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+
 
 }
 
 .nav-link:hover,
 .nav-link.active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 8px rgba(180, 220, 255, 0.6);
 
 }
 
 .nav-link.active::after {
-    
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: rgba(180, 220, 255, 9.8);
+    border-radius: 2px;
 }
