@@ -1,0 +1,17 @@
+.accordion {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.accordion summary {
+    font-weight: bold;
+    outline: none;
+
+}
+
+.accordion p {
+   color: #555;
+   margin-top: 10px;
+}
