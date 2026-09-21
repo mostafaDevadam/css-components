@@ -1,0 +1,19 @@
+
+
+.grp {
+  display: flex;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.grp span {
+    background-color: #ddd;
+    padding: 8px;
+}
+.grp input {
+    border: none;
+    padding: 8px;
+    outline: none;
+    width: 100%;
+
+}
