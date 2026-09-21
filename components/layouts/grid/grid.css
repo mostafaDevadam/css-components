@@ -1,0 +1,33 @@
+
+
+
+
+.gallery {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   gap: 15px;
+   padding: 20px;
+   
+
+
+}
+
+
+
+
+
+
+.item {
+
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+
+.item:hover {
+    border-color: blue;
+}
+
