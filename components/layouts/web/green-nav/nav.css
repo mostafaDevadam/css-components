@@ -34,5 +34,16 @@
     color: #ff9900;
 }
 
+@media (max-width: 600px) {
+   .navbar, .nav-links {
+      flex-direction: column;
+   }
+
+   .nav-links {
+      margin-top: 20px;
+   }
+}
+
+
 
 
