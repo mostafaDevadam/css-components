@@ -1,0 +1,19 @@
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 5px;
+  background-color: #e0e0e0;
+  color: #333;
+  border-radius: 15px;
+}
+
+
+.tag.close::after {
+  content: "x";
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+
+}
