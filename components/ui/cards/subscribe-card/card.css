@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121212;
+  margin: 0;
+}
+
+.subscribe-card{
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    border: 1px solid #333;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 10px;
+
+}
+
+p{
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 20px;
+
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    box-sizing: border-box;
+
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2ecc71;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+button:hover {
+   background: #27ae60;
+}
