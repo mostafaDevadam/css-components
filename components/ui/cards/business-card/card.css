@@ -76,3 +76,25 @@ p.title {
 
 
 
+@media (max-width: 600px) {
+   
+    .card {
+        flex-direction: column;
+        width: 50%;
+        height: 70vh;
+    }
+
+    .left, .right, h2, p.title {
+        width: 100%;
+        
+    }
+
+    .photo {
+        margin: auto;
+        margin-right: 100px;
+    }
+
+    p.title {
+        font-size: 18px;
+    }
+}
