@@ -12,7 +12,7 @@
 
     <header class="">
         <nav class="">
-            <a href="#" class="logo">Logo</a>
+            <a href="#" class="logo" id="logo">Logo</a>
             <ul class="links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -44,7 +44,7 @@
                 </p>
             </div>
             <div class="right">
-                
+
             </div>
 
         </div>
@@ -52,7 +52,7 @@
         <div class="b-border card-full-2">
 
             <div class="right">
-                
+
             </div>
 
             <div class="left">
@@ -68,7 +68,7 @@
         <div class="block-cards">
 
             <div class="card-small  b-border">
-                
+
 
                 <div class="img-small"></div>
                 <div class="bottom">
@@ -107,6 +107,27 @@
 
     </footer>
 
+
+    <script>
+        const btn = document.getElementById("logo")
+        let isDarkMode = false;
+
+        btn.addEventListener('click', () => {
+            if (isDarkMode) {
+                document.body.style.backgroundColor = "#fff";
+                //document.body.style.color = "#000"; // Optional: make text readable on white
+
+                isDarkMode = false;
+            } else {
+                document.body.style.backgroundColor = "#333";
+                //document.body.style.color = "#fff"; // Optional: make text readable on dark
+                isDarkMode = true;
+            }
+
+            document.body.style.fontSize = "1.9rem"
+            
+        });
+    </script>
 </body>
 
 </html>
