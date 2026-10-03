@@ -1,0 +1,51 @@
+
+.profile-card {
+    width: 300px;
+    padding: 20px;
+    background: white;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    font-family: sans-serif;
+    margin: 50px auto;
+
+
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    background: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 3px solid #6c5ce7;
+
+}
+
+
+.avatar:hover {
+    border-color: chocolate;
+}
+
+
+h3 {
+   margin: 0;
+   color: #333;
+}
+
+.role {
+    color: #888;
+    font-size: 0.9rem;
+    margin: 5px 0 20px;
+}
+
+.follow-btn {
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+
+}
