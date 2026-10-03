@@ -1,0 +1,14 @@
+.input-group input {
+
+    border: none;
+    border-bottom: 2px solid #ddd;
+    outline: none;
+    padding: 5px;
+    transition: 0.5s;
+    width: 200px;
+
+}
+
+.input-group input:focus {
+    border-bottom-color: #6c5ce7;
+}
