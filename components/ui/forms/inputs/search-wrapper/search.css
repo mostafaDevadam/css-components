@@ -1,0 +1,25 @@
+.search-wrapper {
+   display: flex;
+   border: 1px solid #ccc;
+   border-radius: 20px;
+   overflow: hidden;
+   width: 250px;
+}
+
+
+.search-input {
+  border: none;
+  padding: 10px;
+  outline: none;
+  flex-grow: 1;
+}
+
+.search-btn {
+   background: #0ea5e9;
+   border: none;
+   color: white;
+   padding: 0 15px;
+   cursor: pointer;
+
+}
+
